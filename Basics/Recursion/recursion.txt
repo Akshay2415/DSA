@@ -1,0 +1,132 @@
+//Recursion
+// Recursion is a programming technique where a function calls
+// itself to solve a problem by breaking it down into 
+// smaller instances of the same problem.
+
+// Base Case
+// The base case is the condition that stops the recursive calls.
+// Without a base case,the function will keep calling itself forever,
+// resulting in a stack overflow.
+
+#include <iostream>
+using namespace std;
+
+void function() {
+    //Base Case
+    if (condition)
+        return;
+
+    //Recursive Call
+    function();
+}
+
+int main(){    
+    return 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+1. Stack Space
+
+Stack space is the memory used to store function calls.
+
+Whenever a function is called, the system creates a stack frame that stores:
+
+Function parameters
+Local variables
+Return address
+Other function information
+
+When the function finishes, its stack frame is removed.
+
+Example
+void fun(int n){
+    if(n == 0) return;
+
+    cout << n << " ";
+    fun(n - 1);
+}
+
+Calling:
+
+fun(3);
+
+The function calls are stored like this:
+
+Top
+---------
+fun(0)
+---------
+fun(1)
+---------
+fun(2)
+---------
+fun(3)
+---------
+Bottom
+
+When fun(0) reaches the base case, the stack starts emptying:
+
+fun(0) returns
+↑
+fun(1) returns
+↑
+fun(2) returns
+↑
+fun(3) returns
+Stack Space Complexity
+
+If recursion goes n levels deep:
+
+Stack Space = O(n)
+
+because there are n function calls on the stack.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+2. Recursion Tree
+
+A recursion tree is a diagram that shows how recursive calls are made.
+
+It helps you understand:
+
+        Number of recursive calls
+        Time complexity
+        Order of execution
+
+Example 1
+void fun(int n){
+    if(n == 0) return;
+
+    fun(n - 1);
+}
+
+Calling:
+
+fun(3);
+
+Recursion tree:
+
+fun(3)
+   |
+fun(2)
+   |
+fun(1)
+   |
+fun(0)
+
+This is a linear recursion tree because each function makes only one recursive call.
+
+Example 2 (Binary Recursion)
+fib(n) = fib(n-1) + fib(n-2)
+
+Recursion tree for fib(5):
+
+              fib(5)
+            /        \
+        fib(4)      fib(3)
+       /     \      /     \
+   fib(3) fib(2) fib(2) fib(1)
+    /   \
+fib(2) fib(1)
+
+Notice that fib(3) and fib(2) are computed multiple times. This is why the recursive Fibonacci solution is slow.
