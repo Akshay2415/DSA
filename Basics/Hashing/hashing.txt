@@ -1,0 +1,49 @@
+Hashing is a technique used to store and retrieve data quickly using a key. It maps a key to an index in a data structure called a hash table, allowing operations in O(1) average time.
+
+Why Hashing?
+    Fast searching
+    Fast insertion
+    Fast deletion
+    Used for frequency counting and lookups
+
+Example
+
+Suppose we have an array:
+
+    arr = {1, 2, 1, 3, 2, 1}
+
+To count frequencies:
+
+    1 → 3
+    2 → 2
+    3 → 1
+
+Instead of checking every element repeatedly (O(n²)), 
+hashing stores the count and gives the answer in O(n).
+
+
+> In Number Hashing - there is problem related to array size you can not insert an array up to certain size (10^6); 
+                     beside this it gives and error
+
+                     so to solve this problem we use STL like -> maps
+                                                              -> unordered map 
+
+        MAP ->map is an STL container that stores key-value pairs in sorted order of keys.
+
+                    Syntax:  map<int, int> mp;
+                                Key → Number (element)
+                                Value → Frequency (count)
+        
+                    TIME COMPLEXITY IS O(log n)
+                    this is in every case best avg worst
+        
+        UNORDERED MAP ->unordered_map is an STL container that stores key-value pairs using a hash table. It stores keys in no particular order and provides O(1) average time complexity for insertion, search, and deletion.
+
+                    Syntax: unordered_map<int, int> mp;
+                                Key → Number (element)
+                                Value → Frequency (count)
+
+                    For lesser time complexity this is use
+                    it  gives O(1) in best and avg case and O(n) in worst case (it is very rare case)
+                                                                  and it happens bcoz of collision
+                                                                   
