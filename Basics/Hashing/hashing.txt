@@ -1,4 +1,6 @@
-Hashing is a technique used to store and retrieve data quickly using a key. It maps a key to an index in a data structure called a hash table, allowing operations in O(1) average time.
+Hashing is a technique used to store and retrieve data quickly using a key.
+It maps a key to an index in a data structure called a hash table, allowing 
+operations in O(1) average time.
 
 Why Hashing?
     Fast searching
@@ -22,13 +24,15 @@ Instead of checking every element repeatedly (O(n²)),
 hashing stores the count and gives the answer in O(n).
 
 
-> In Number Hashing - there is problem related to array size you can not insert an array up to certain size (10^6); 
-                     beside this it gives and error
+> In Number Hashing - there is problem related to array size you can not insert an 
+                      array up to certain size (10^6); 
+                     beside this it gives an error
 
                      so to solve this problem we use STL like -> maps
                                                               -> unordered map 
 
-        MAP ->map is an STL container that stores key-value pairs in sorted order of keys.
+        MAP ->map is an STL container that stores key-value pairs in sorted order of 
+            keys.
 
                     Syntax:  map<int, int> mp;
                                 Key → Number (element)
@@ -37,7 +41,9 @@ hashing stores the count and gives the answer in O(n).
                     TIME COMPLEXITY IS O(log n)
                     this is in every case best avg worst
         
-        UNORDERED MAP ->unordered_map is an STL container that stores key-value pairs using a hash table. It stores keys in no particular order and provides O(1) average time complexity for insertion, search, and deletion.
+        UNORDERED MAP ->unordered_map is an STL container that stores key-value pairs 
+                    using a hash table. It stores keys in no particular order and provides 
+                    O(1) average time complexity for insertion, search, and deletion.
 
                     Syntax: unordered_map<int, int> mp;
                                 Key → Number (element)

@@ -7,7 +7,8 @@ int main() {
     int n; 
     cin >> n;
     int arr[n];  //the size of an array go upto 10^6 inside main function 
-                 //it is going to give you segmentation error for putting array of greater size 
+                 //it is going to give you segmentation error for putting array of 
+                 //greater size 
     for(int i = 0; i<n ;i++){
         cin >> arr[i];
     }
