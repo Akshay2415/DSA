@@ -1,6 +1,6 @@
 /* 
 FIBONACI SERIES--> it is type of series where next number is the 
-                sum of lasst two numbers 
+                sum of last two numbers 
 
                 ex-- 0 1 1 2 3 5 8 .... so on 
                 next number = last number + second last number
