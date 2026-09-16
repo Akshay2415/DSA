@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 /* 
@@ -35,6 +35,26 @@ public:
         }
         for(int i =( cnt0 + cnt1); i < n ; i++){
             nums[i] = 2;
+        }
+
+    }
+
+    void DutchFlag(vector<int>& nums){
+        //Dutch Flag Algorithm
+        int n= nums.size();
+        int low = 0 ,mid = 0 ,high = n-1;
+
+        while(mid<=high){
+            if(nums[mid]==0){
+                swap(nums[mid],nums[low]);
+                low++;
+                mid++;
+            }else if(nums[mid]==1){
+                mid++;
+            }else{
+                swap(nums[mid],nums[high]);
+                high--;
+            }
         }
 
     }
