@@ -8,7 +8,7 @@ using namespace std;
 vector<int> twoSumBetter(vector<int> &nums){
     int n = nums.size();
     vector<int>ans(n,0);
-    int posIndex = 0 , negIndex = 0;
+    int posIndex = 0 , negIndex = 1;
 
     for(int i = 0 ; i < n; i++ ){
         if(nums[i] < 0){
